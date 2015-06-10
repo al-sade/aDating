@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap-3.3.4/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <h1 class="hm-title">aDating</h1>
+        <div class="userBox">
+            <img src="{{user.profilePic}}" class="userPic">
+            <h3 class="userName">{{user.fullname}} | <a href="/logout">Logout</a> </h3>
+            <h3>{{user.birthday}}</h3>
+            <h3>{{user.friends}}</h3>
+            <h3>{{user.profileUrl}}</h3>
+            <h3>{{user.events}}</h3>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
