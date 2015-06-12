@@ -1,7 +1,10 @@
-h1{
-    color: blue;
+.hm-container{
+    position: absolute;
+    top: 22%;
+    left: 29%;
 }
 
-h3 {
-    background: greenyellow;
+.hm-container>h1{
+    font-size: 8em;
 }
+

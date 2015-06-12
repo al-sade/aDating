@@ -39,6 +39,8 @@ require('./auth/passportAuth.js')(passport, FacebookStrategy, config, mongoose);
 
 require('./routes/routes.js')(express, app, passport);
 
+
+
 app.listen(3000, function(){
     console.log("aDating working on Port 3000");
     console.log('Mode: ' + env);

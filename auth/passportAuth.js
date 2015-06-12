@@ -11,7 +11,7 @@ module.exports = function(passport, FacebookStrategy, config, mongoose){
 
     var userModel = mongoose.model('fbUser', fbUser);
 
-    passport.serializeUser(function(user,done){
+    passport.serializeUser(function(user,done){ //make the user reference available threw multiple pages
         done(null,user.id);
     });
 
@@ -33,7 +33,7 @@ module.exports = function(passport, FacebookStrategy, config, mongoose){
         userModel.findOne({'profileID':profile.id}, function(err, result){
             if(result){
                 done(null,result);
-               // console.log(profile.events);
+               //console.log(accessToken);
             } else {
                 // Create a new user in our mongoLab account
                 var newFbUSer = new userModel({
@@ -41,7 +41,7 @@ module.exports = function(passport, FacebookStrategy, config, mongoose){
                     fullname: profile.displayName,
                     profilePic:profile.photos[0].value || '',
                     birthday:profile.birthday,
-                    events:profile.photos[0].url,
+                    //events:profile.events[0].url,
                     profileUrl:profile.profileUrl
 
                 });
