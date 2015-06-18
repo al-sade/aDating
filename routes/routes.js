@@ -14,10 +14,10 @@ module.exports = function(express, app, passport){
     }
 
     router.get('/auth/facebook', passport.authenticate('facebook', { scope: [ 'email', 'user_friends', 'public_profile', 'user_events' ] }));
-    router.get('/auth/facebook/callback', passport.authenticate('facebook', {
-        successRedirect:'/welcome', //if authentication is successful, navigate to this path
-        failureRedirect:'/'         //else, navigate here
-    }))
+        router.get('/auth/facebook/callback', passport.authenticate('facebook', {
+            successRedirect:'/welcome', //if authentication is successful, navigate to this path
+            failureRedirect:'/'         //else, navigate here
+        }))
 
     router.get('/welcome', securePages, function(req, res, next){
         res.render('welcome', {title:'Welcome to aDating', user:req.user});

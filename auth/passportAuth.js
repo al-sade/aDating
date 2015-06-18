@@ -5,8 +5,7 @@ module.exports = function(passport, FacebookStrategy, config, mongoose){
         fullname:String,
         profilePic:String,
         friends:String,
-        profileUrl:String,
-        email:String
+        events:String
     })
 
     var userModel = mongoose.model('fbUser', fbUser);
@@ -33,16 +32,14 @@ module.exports = function(passport, FacebookStrategy, config, mongoose){
         userModel.findOne({'profileID':profile.id}, function(err, result){
             if(result){
                 done(null,result);
-               //console.log(accessToken);
+               console.log(accessToken);
             } else {
                 // Create a new user in our mongoLab account
                 var newFbUSer = new userModel({
                     profileID: profile.id,
                     fullname: profile.displayName,
                     profilePic:profile.photos[0].value || '',
-                    birthday:profile.birthday,
-                    //events:profile.events[0].url,
-                    profileUrl:profile.profileUrl
+                    //events:profile.events[0].id
 
                 });
               //  console.log(newFbUSer.profilePic);

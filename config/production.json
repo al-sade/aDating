@@ -4,7 +4,6 @@
     "fb":{
         "appID":"110413589294849",
         "appSecret":"36c06a71f02ad54811e49ae070f3af2e",
-        "callbackURL":"https://adating.herokuapp.com/auth/facebook/callback"
-    },
-    "host":"https://adating.herokuapp.com/"
+        "callbackURL":"http://localhost:3000/auth/facebook/callback"
+    }
 }
