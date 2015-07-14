@@ -24,7 +24,11 @@ module.exports = function(express, app, passport){
     })
 
     router.get('/menu', securePages, function(req, res, next){
-        res.render('main_menu', {title:'Welcome to menu'});
+        res.render('main_menu', {title:'Welcome to aDating'});
+    })
+
+    router.get('/upcoming_events', securePages, function(req, res, next){
+        res.render('upcoming_events', {title:'Welcome to aDating - Upcoming Events'});
     })
 
     router.get('/logout', function(req, res, next){

@@ -1,3 +1,19 @@
+body{
+    background: #000;
+}
+
+#main_logo{
+    position: absolute;
+    left: 8%;
+    top: 32%;
+}
+
+#main_login{
+    position: absolute;
+    left: 8%;
+    top: 48%;
+}
+
 .hm-container{
     position: absolute;
     top: 22%;
@@ -8,3 +24,61 @@
     font-size: 8em;
 }
 
+#main_menu{
+    position: absolute;
+    width: 100%;
+    height: 11vh;
+    background-color: rgb(81, 200, 81);
+}
+
+#menu_logo{
+    position: absolute;
+    right: 6%;
+    top: 36%;
+}
+
+#welcomePic{
+    position: absolute;
+    left: 36%;
+    top: 17%;
+    border-radius: 50%;
+}
+
+#welcomeName{
+    position: absolute;
+    top: 37%;
+    left: 37%;
+    font-size: 8rem;
+}
+
+.welcomeCircle{
+    border-radius: 50%;
+    border: 3px solid black;
+    position: absolute;
+    width: 24%;
+    height: 17%;
+}
+
+.welcomeCircle>h2{
+    position: relative;
+    top: 100%;
+    text-align: center;
+}
+
+#upcomingEvents{
+    top: 49%;
+}
+
+#profile{
+    top: 49%;
+    left: 65%;
+}
+
+#requests{
+    top: 74%;
+    left: 65%;
+}
+
+#calendar{
+    top: 74%;
+}

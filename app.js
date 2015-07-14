@@ -2,6 +2,7 @@ var express = require('express'),
     app = express(),
     path = require('path'),
     cookieParser= require('cookie-parser'),
+    fbgraph = require('fbgraphapi'),
     session = require('express-session'),
     config = require('./config/config.js'),
     ConnectMongo = require('connect-mongo')(session),
@@ -14,6 +15,7 @@ app.engine('html', require('hogan-express'));
 app.set('view engine', 'html'); //set view engine to use html files
 app.use(express.static(path.join(__dirname, 'public'))); //tells express find all the static assets files  in ./public (css,images etc)
 app.use(cookieParser());
+
 
 //development/production separation
 var env = process.env.NODE_ENV || 'development';
@@ -35,10 +37,9 @@ if (env ==='development') {
 app.use(passport.initialize());
 app.use(passport.session());
 
-require('./auth/passportAuth.js')(passport, FacebookStrategy, config, mongoose);
+require('./auth/passportAuth.js')(passport, FacebookStrategy, config, mongoose, fbgraph);
 
 require('./routes/routes.js')(express, app, passport);
-
 
 
 app.listen(3000, function(){
