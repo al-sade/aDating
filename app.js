@@ -8,7 +8,7 @@ var express = require('express'),
     ConnectMongo = require('connect-mongo')(session),
     mongoose = require('mongoose').connect(config.dbURL),
     passport = require('passport'),
-    FacebookStrategy = require('passport-facebook').Strategy
+    FacebookStrategy = require('passport-facebook').Strategy,
     port_number = server.listen(process.env.PORT || 3000)
 
 app.listen(port_number);
