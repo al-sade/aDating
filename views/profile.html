@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../css/bootstrap-3.3.4/dist/js/bootstrap.min.js"></script>
+    <Script src="../js/funcs.js"></Script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/side_bar.css">
+    <link rel="stylesheet" href="../css/bootstrap-3.3.4/dist/css/bootstrap.min.css">
+</head>
+<body>
+<nav id="main_menu" class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="row">
+            <a id="back_button" type="button" class="btn btn-default" aria-label="Left Align" href="/welcome">
+                <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+            </a>
+            <h1 id="profile_name">{{user.fullname}}</h1>
+            <a href="/welcome"><img id="menu_logo" src="../images/small_logo.png" ></a>
+        </div>
+    </div>
+</nav>
+
+<div id="profile_box">
+    <img src="{{user.profilePic}}" width="600" height="600">
+    <h2>{{user.fullname}}, 24</h2>
+    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+</div>
+
+<div id="upcoming_events">
+    <h2>Upcoming Events</h2>
+    <
+</div>
+
+<div id="mutual_likes">
+    <h2>Mutual Likes</h2>
+    <
+</div>
+
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
+</body>
+</html>

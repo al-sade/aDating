@@ -5,45 +5,16 @@
     <title>{{title}}</title>
     <script src="../js/jquery-2.1.4.min.js"></script>
     <script src="../css/bootstrap-3.3.4/dist/js/bootstrap.min.js"></script>
+    <Script src="../js/funcs.js"></Script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/side_bar.css">
     <link rel="stylesheet" href="../css/bootstrap-3.3.4/dist/css/bootstrap.min.css">
 </head>
 <body>
+<div id="menu">
 
-<nav id="main_menu" class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="row">
-            <ul>
-                <li id="more"><a  href="#menu-toggle" class="btn btn-default" id="menu-toggle">more</a></li>
-                <li id="cal">calendar</li>
-                <li id="notifications"></li>
-            </ul>
-            <img id="menu_logo" src="../images/small_logo.png" >
-        </div>
-    </div>
-</nav>
+</div>
 
-<div id="wrapper">
-
-    <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li>
-                <a href="#">Edit Profile</a>
-            </li>
-            <li>
-                <a href="#">Favourite Friends</a>
-            </li>
-            <li>
-                <a href="#">App Settings</a>
-            </li>
-            <li>
-                <a href="#">Help</a>
-            </li>
-        </ul>
-    </div>
-    <!-- /#sidebar-wrapper -->
 
 
 </div>
@@ -56,21 +27,28 @@
         </div>
         <section>
             <article id="upcomingEvents" class="welcomeCircle">
+                <span class="main_symb"><img src="../images/upcoming_events.png"></span>
                 <h2><a href="/upcoming_events">Upcoming <br> Events</a></h2>
             </article>
             <article id="calendar" class="welcomeCircle">
+                <span class="main_symb"><img src="../images/calendar.png"></span>
                 <h2><a href="/calendar">Calendar</a></h2>
             </article>
             <article id="profile" class="welcomeCircle">
-                <h2>Profile</h2>
+                <span class="main_symb"><img src="../images/profile.png"></span>
+                <h2><a href="/profile">Profile</a></h2>
             </article>
             <article id="requests" class="welcomeCircle">
-                <h2>Requests</h2>
+                <span class="main_symb"><img src="../images/envelope.png"></span>
+                <h2><a href="requests">Requests</a></h2>
             </article>
         </section>
     </div>
 </div>
 
+<Script>
+    document.getElementById('menu').innerHTML += menu;
+</Script>
 <!-- Menu Toggle Script -->
 <script>
     $("#menu-toggle").click(function(e) {

@@ -1,0 +1,20 @@
+body{
+    background: #EAEAEA !important;
+}
+
+h2{
+    font-size: 4em!important;
+    font-weight: 700!important;
+}
+
+#upcoming_events{
+    position: absolute;
+    top: 61%;
+    left: 16%;
+}
+
+#mutual_likes{
+    position: absolute;
+    bottom: 15%;
+    left: 16%;
+}

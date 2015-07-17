@@ -1,6 +1,5 @@
 module.exports = function(express, app, passport){
     var router = express.Router();
-
     router.get('/', function(req,res,next){
         res.render('index', {title: "welcome to aDating"});
     })
@@ -13,7 +12,7 @@ module.exports = function(express, app, passport){
         }
     }
 
-    router.get('/auth/facebook', passport.authenticate('facebook', { scope: [ 'email', 'user_friends', 'public_profile', 'user_events' ] }));
+    router.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email', 'user_friends', 'public_profile', 'user_events' ] }));
         router.get('/auth/facebook/callback', passport.authenticate('facebook', {
             successRedirect:'/welcome', //if authentication is successful, navigate to this path
             failureRedirect:'/'         //else, navigate here
@@ -24,11 +23,23 @@ module.exports = function(express, app, passport){
     })
 
     router.get('/menu', securePages, function(req, res, next){
-        res.render('main_menu', {title:'Welcome to aDating'});
+        res.render('main_menu', {title:'Welcome to aDating' });
     })
 
     router.get('/upcoming_events', securePages, function(req, res, next){
         res.render('upcoming_events', {title:'Welcome to aDating - Upcoming Events'});
+    })
+
+    router.get('/profile', securePages, function(req, res, next){
+        res.render('profile', {title:'Welcome to aDating - Profile', user:req.user});
+    })
+
+    router.get('/calendar', securePages, function(req, res, next){
+        res.render('calendar', {title:'Welcome to aDating - Calendar'});
+    })
+
+    router.get('/requests', securePages, function(req, res, next){
+        res.render('requests', {title:'Welcome to aDating - Requests'});
     })
 
     router.get('/logout', function(req, res, next){
