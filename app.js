@@ -8,8 +8,7 @@ var express = require('express'),
     ConnectMongo = require('connect-mongo')(session),
     mongoose = require('mongoose').connect(config.dbURL),
     passport = require('passport'),
-    FacebookStrategy = require('passport-facebook').Strategy,
-    port_number = server.listen(process.env.PORT || 3000)
+    FacebookStrategy = require('passport-facebook').Strategy
 
 app.listen(port_number);
 app.set('views', path.join(__dirname, 'views')); //get views from root dir
@@ -44,7 +43,7 @@ require('./auth/passportAuth.js')(passport, FacebookStrategy, config, mongoose, 
 require('./routes/routes.js')(express, app, passport);
 
 
-app.listen(port_number, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log("aDating working on Port 3000");
     console.log('Mode: ' + env);
 })
