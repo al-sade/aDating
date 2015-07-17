@@ -9,7 +9,9 @@ var express = require('express'),
     mongoose = require('mongoose').connect(config.dbURL),
     passport = require('passport'),
     FacebookStrategy = require('passport-facebook').Strategy
+    port_number = server.listen(process.env.PORT || 3000)
 
+app.listen(port_number);
 app.set('views', path.join(__dirname, 'views')); //get views from root dir
 app.engine('html', require('hogan-express'));
 app.set('view engine', 'html'); //set view engine to use html files
@@ -42,7 +44,7 @@ require('./auth/passportAuth.js')(passport, FacebookStrategy, config, mongoose, 
 require('./routes/routes.js')(express, app, passport);
 
 
-app.listen(3000, function(){
+app.listen(port_number, function(){
     console.log("aDating working on Port 3000");
     console.log('Mode: ' + env);
 })
