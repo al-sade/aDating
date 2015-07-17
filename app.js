@@ -10,7 +10,6 @@ var express = require('express'),
     passport = require('passport'),
     FacebookStrategy = require('passport-facebook').Strategy
 
-app.listen(port_number);
 app.set('views', path.join(__dirname, 'views')); //get views from root dir
 app.engine('html', require('hogan-express'));
 app.set('view engine', 'html'); //set view engine to use html files
