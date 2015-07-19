@@ -62,7 +62,7 @@ module.exports = function(express, app, passport){
     })
 
     router.get('/profile', securePages, function(req, res, next){
-        res.render('profile', {title:'Welcome to aDating - Profile'});
+        res.render('profile', {title:'Welcome to aDating - Profile', user:req.user});
     })
 
     router.get('/calendar', securePages, function(req, res, next){
