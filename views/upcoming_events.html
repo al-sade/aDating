@@ -6,6 +6,7 @@
     <script src="../js/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <Script src="../js/funcs.js"></Script>
+    <Script src="../js/menu.js"></Script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/side_bar.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -15,6 +16,91 @@
 
 </div>
 
+<nav>
+    <ul id="events_categories">
+        <li><a href="party">PARTY</a></li>
+        <li class="clicked"><a href="show">SHOW</a></li>
+        <li><a href="concert">CONCERT</a></li>
+    </ul>
+</nav>
+<h2 id="date_1">Tomorrow</h2>
+<section id="date_1_section">
+    <article class="event_holder">
+        <img src="{{cover_photo_1}}" width="200" height="200">
+        <ul class="events_data">
+            <li class="event_header">{{event_name_1}}</li>
+            <li class="event_location">{{event_location_1}}<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></li>
+            <li class="event_time">{{event_time_1}}</li>
+        </ul>
+        <div class="attenders">
+            <ul class="event_attenders">
+                <li><img src="{{user_pic_1}}" width="70" height="70"></li>
+                <li><img src="{{user_pic_2}}" width="70" height="70"></li>
+                <li><img src="{{user_pic_3}}" width="70" height="70"></li>
+                <li><img src="{{user_pic_4}}" width="70" height="70"></li>
+                <li><img src="{{user_pic_5}}" width="70" height="70"></li>
+            </ul>
+            <button class="more_adaters">More Adaters</button>
+        </div>
+    </article>
+    <article class="event_holder">
+        <img src="{{cover_photo_2}}" width="200" height="200">
+        <ul class="events_data">
+            <li class="event_header">{{event_name_2}}</li>
+            <li class="event_location">{{event_location_2}}<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></li>
+            <li class="event_time">{{event_time_2}}</li>
+        </ul>
+        <div class="attenders">
+            <ul class="event_attenders">
+                <li><img src="{{user_pic_1}}" width="70" height="70"></li>
+                <li><img src="{{user_pic_2}}" width="70" height="70"></li>
+                <li><img src="{{user_pic_3}}" width="70" height="70"></li>
+                <li><img src="{{user_pic_4}}" width="70" height="70"></li>
+                <li><img src="{{user_pic_5}}" width="70" height="70"></li>
+            </ul>
+            <button class="more_adaters">More Adaters</button>
+        </div>
+    </article>
+    <article class="event_holder">
+        <img src="{{cover_photo_3}}" width="200" height="200">
+        <ul class="events_data">
+            <li class="event_header">{{event_name_3}}</li>
+            <li class="event_location">{{event_location_3}}<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></li>
+            <li class="event_time">{{event_time_3}}</li>
+        </ul>
+        <div class="attenders">
+            <ul class="event_attenders">
+                <li><img src="{{user_pic_1}}" width="70" height="70"></li>
+                <li><img src="{{user_pic_2}}" width="70" height="70"></li>
+                <li><img src="{{user_pic_3}}" width="70" height="70"></li>
+                <li><img src="{{user_pic_4}}" width="70" height="70"></li>
+                <li><img src="{{user_pic_5}}" width="70" height="70"></li>
+            </ul>
+            <button class="more_adaters">More Adaters</button>
+        </div>
+    </article>
+</section>
+
+<section id="date_2_section">
+<article class="event_holder">
+    <img src="../images/profile.png" width="200" height="200">
+    <ul class="events_data">
+        <li class="event_header">{{event_name_4}}</li>
+        <li class="event_location">{{event_location_4}}<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></li>
+        <li class="event_time">{{event_time_4}}</li>
+    </ul>
+    <div class="attenders">
+        <ul class="event_attenders">
+            <li><img src="{{user_pic_2}}" width="70" height="70"></li>
+            <li><img src="{{user_pic_1}}" width="70" height="70"></li>
+            <li><img src="{{user_pic_5}}" width="70" height="70"></li>
+            <li><img src="{{user_pic_3}}" width="70" height="70"></li>
+            <li><img src="{{user_pic_4}}" width="70" height="70"></li>
+        </ul>
+        <button class="more_adaters">More Adaters</button>
+    </div>
+</article>
+</section>
 <script>
     document.getElementById('menu').innerHTML += menu;
 </script>

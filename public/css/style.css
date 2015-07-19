@@ -165,3 +165,103 @@ a:visited{
     left: 2%;
 }
 
+#events_categories{
+    background-color: rgb(99, 221, 184);
+    position: absolute;
+    list-style: none;
+    font-size: 4em;
+    display: inline-flex;
+    width: 104%;
+    top: 11.5%;
+    left: -4%;
+}
+
+#events_categories>li{
+    width: 34%;
+    text-align: center;
+    color: #fff;
+}
+
+.clicked{
+    background-color: #000000;
+    border: 1px solid #000000;
+}
+
+.events_data{
+    width: 72%;
+    position: absolute;
+    left: 25%;
+    list-style: none;
+    right: 26%;
+    height: 18%;
+    top: 7%;
+}
+
+
+#date_1_section{
+    position: absolute;
+    top: 20%;
+    background-color: #EAEAEA;
+    width: 100%;
+}
+
+.event_holder {
+    background-color: #fff;
+    width: 100%;
+    position: relative;
+    margin-bottom: 1%;
+}
+
+.event_holder>img{
+    left: 6%;
+    margin-top: 2%;
+    position: relative;
+    margin-bottom: 2.5%;
+}
+
+
+.event_header{
+    width: 87%;
+    font-size: 2.5em;
+}
+
+.event_location {
+    font-size: 2em;
+    position: relative;
+    top: 53%;
+}
+.event_time {
+    font-size: 3.5em;
+    position: relative;
+    top: 100%;
+}
+
+
+
+.event_attenders{
+    position: relative;
+    display: inline-flex;
+    width: 47%;
+}
+
+.event_attenders>li{
+    margin-left: 3%;
+}
+
+.more_adaters{
+    font-size: 3em;
+    position: absolute;
+    top: 75%;
+    background-color: #EAEAEA;
+    border: transparent;
+    color: #fff;
+    width: 36%;
+    height: 19%;
+    right: 12%;
+}
+
+#date_2_section{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+}

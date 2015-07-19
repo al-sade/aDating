@@ -38,8 +38,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./auth/passportAuth.js')(passport, FacebookStrategy, config, mongoose, fbgraph);
-
 require('./routes/routes.js')(express, app, passport);
+require('./data/upcoming_events.js')(passport, FacebookStrategy, config, mongoose, fbgraph);
+require('./data/users.js')(passport, FacebookStrategy, config, mongoose, fbgraph);
 
 
 app.listen(process.env.PORT || 3000, function(){
